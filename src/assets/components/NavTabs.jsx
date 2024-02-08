@@ -47,6 +47,24 @@ const NavTabs = () =>{
           Contact
         </NavLink>
           </li>
+
+          <li>
+            <NavLink to="about" 
+            className={({isActive}) =>
+          isActive? 'nav-link active':'nav-link'}
+          >About</NavLink>
+          </li>
+          
+          <li>
+          <NavLink
+          to="skill"
+          className={({ isActive }) =>
+            isActive ? 'nav-link active' : 'nav-link'
+          }
+        >
+          Skill
+        </NavLink>
+          </li>
         </ul>
       </div>
 
@@ -85,6 +103,28 @@ const NavTabs = () =>{
           }
         >
           Contact
+        </NavLink>
+          </li>
+
+          <li className='py-6 text-4xl'>
+          <NavLink
+          to="about"
+          className={({ isActive }) =>
+            isActive ? 'nav-link active' : 'nav-link'
+          }
+        >
+          About
+        </NavLink>
+          </li>
+
+          <li className='py-6 text-4xl'>
+          <NavLink
+          to="skill"
+          className={({ isActive }) =>
+            isActive ? 'nav-link active' : 'nav-link'
+          }
+        >
+          Skill
         </NavLink>
           </li>
         </ul>

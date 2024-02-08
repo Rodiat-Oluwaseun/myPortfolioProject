@@ -5,7 +5,8 @@ import NavTabs from './assets/components/NavTabs';
 import Home from './assets/components/Home';
 import ProjectPage from './assets/components/ProjectPage';
 import Contact from './assets/components/Contact';
-// import "tailwindcss/tailwind.css"
+import About from './assets/components/About';
+import Skill from './assets/components/Skill';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       
         {/* Define a route that will have descendant routes */}
         <Route path="contact/*" element={<Contact />} />
+        <Route path='about' element={<About />}/>
+        <Route path='skill' element={<Skill />}/>
+
       </Routes>
     </Router>
   );
