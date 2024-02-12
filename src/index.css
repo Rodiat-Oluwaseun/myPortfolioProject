@@ -19,3 +19,18 @@
 
     }
 }
+
+.work-div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+.work-div:hover {
+    background-image: linear-gradient(
+        to right,
+        rgba(194, 189, 184, 0.8),
+       hsla(36, 6%, 75%, 1)
+
+    ) !important;
+}
