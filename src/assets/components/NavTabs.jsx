@@ -11,7 +11,7 @@ const NavTabs = () =>{
    const [tabMenu , setTabMenu] =useState(false)
    const handleClick = () => setTabMenu(!tabMenu)
   return(
-    <div className='w-full h-[80px] flex justify-between items-center px-4 bg-[#030303] text-[#C5C0B9]'>
+    <div className='w-full h-[80px] flex justify-between items-center px-4 bg-[#161A30] text-[#B6BBC4]'>
       <div>
         <img src={logo} alt="Log Image"  style={{width:'50px'}}/>
       </div>
@@ -74,7 +74,7 @@ const NavTabs = () =>{
           </div>
           {/* Mobile -menu */}
           <div>
-          <ul className={!tabMenu? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#030303] flex flex-col justify-center items-center'}>
+          <ul className={!tabMenu? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#31304D] flex flex-col justify-center items-center'}>
         <li className='py-6 text-4xl'>
           <NavLink
           to="/"
@@ -131,24 +131,24 @@ const NavTabs = () =>{
             {/* Social media icon */}
             <div className=' hidden lg:flex fixed  flex-col top-[35%] left-0'>
             <ul>
-              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B78021]'>
+              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B6BBC4]'>
                  <a className=" flex justify-between item-center w-full text-grey" href='/'>
                   Linkedin <FaLinkedin size={30} />
                  </a>
               </li>
 
-              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B78021]'>
+              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B6BBC4]'>
                  <a className=" flex justify-between item-center w-full text-grey" href='/'>
                   Github <FaGithub size={30} />
                  </a>
               </li>
 
-              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B78021]'>
+              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B6BBC4]'>
                  <a className=" flex justify-between item-center w-full text-grey" href='/'>
                   Resume <BsFillPersonLinesFill size={30} />
                  </a>
               </li>
-              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B78021]'>
+              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#B6BBC4]'>
                  <a className=" flex justify-between item-center w-full text-grey" href='/'>
                   Email <HiOutlineMail size={30} />
                  </a>

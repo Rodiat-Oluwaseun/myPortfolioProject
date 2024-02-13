@@ -1,36 +1,26 @@
 import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-// import Learn from './Project';
-import Project from './Project';
 
-function Contact(props) {
-  return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-      <Link to="learn" role="button" className="btn btn-link">
-        Learn More
-      </Link>
-      <Link to="contact" role="button" className="btn btn-link">
-        Learn Less
-      </Link>
-      <Routes>
-        <Route path="project" element={<Project />} />
-      </Routes>
-    </div>
-  );
+
+const Contact =() =>{
+return(
+<div className='w-full h-screen bg-[] flex justify-center item-center p-4'>
+  <form action="" className='flex flex-col max-w-[600px] w-full'>
+    <div className='pb-4'>
+        <p className='text-4xl font-serif inline border-b-4 border-[#E5E7EA] text-dark-100'> Contact </p>   
+        <p className='py-4 text-black'>Submit the form below or send an email -rolayemi@outlook.com</p>   
+      </div>  
+      
+        <input className='bg-[#E5E7EA] p-2' type="text" placeholder='Name' />
+        <input  className='bg-[#E5E7EA] p-2 my-4'  type="text" placeholder='Email' />
+        <textarea name="message" className="bg-[#E5E7EA] p-2"  rows="10"></textarea>
+        <button className='text-black-700 border-2 hover:bg-[#E5E7EA] hover:border-[#E5E7EA] px-4 py-3  mx-auto  rounded my-8 flex items-center '>Let's collaborate</button>
+
+      
+
+  </form>
+</div>
+
+)
 }
 
 export default Contact;
