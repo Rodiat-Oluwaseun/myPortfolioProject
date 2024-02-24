@@ -1,9 +1,11 @@
 import React from 'react';
 import  Horiseon from '../../assets/Images/Horiseon.png'
+import WeatherDashboard from '../../assets/Images/WeatherDashboard.jpeg'
+import Book from '../../assets/Images/BookLibrary.jpeg'
 
 function Project() {
   return (
-  <div className='w-full md:h-screen text-red-300 background-[#0a192f]'>
+  <div className='w-full md:h-screen text-dark-100 background-[#0a192f]'>
      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
         <p className='text-4xl font-serif inline border-b-4 text-grey-400 '>Projects</p>
@@ -48,7 +50,7 @@ function Project() {
           </div>
           
           <div 
-          style={{background: `url(${Horiseon})`}}
+          style={{background: `url(${Book})` }}
           className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto work-div'>
             
             {/* Hover effect */}
@@ -97,7 +99,7 @@ function Project() {
 
 
           <div 
-          style={{background: `url(${Horiseon})`}}
+          style={{background: `url(${WeatherDashboard})`}}
           className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto work-div'>
             
             {/* Hover effect */}

@@ -12,7 +12,7 @@ const Skill = () =>{
     return (
         <div className='w-full h-screen bg-[#C2BDB8] text-[#000000] '> 
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className='text-4xl py-4 inline border-b-4'>
+        <div className='text-4xl font-serif inline border-b-2 border-[#E5E7EA] text-dark-100'>
             <p>Skills</p>
             <p> // Here are the framework I've worked with</p>
         </div>
