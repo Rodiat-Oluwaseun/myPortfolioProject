@@ -132,7 +132,9 @@ const NavTabs = () =>{
             <div className=' hidden lg:flex fixed  flex-col top-[35%] left-0'>
             <ul>
               <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#161A30]'>
-                 <a className=" flex justify-between item-center w-full text-grey" href='/'>
+                 <a className=" flex justify-between item-center w-full text-grey" href='www.linkedin.com/in/
+olayemi-amusa-6933a72a5
+'>
                   Linkedin <FaLinkedin size={30} />
                  </a>
               </li>
