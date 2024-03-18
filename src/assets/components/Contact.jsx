@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,36 +8,57 @@ const Contact = () => {
     message: "",
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const form = useRef();
+  // logic for form submission
+  const sendEmail = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch("https://getform.io/f/7axYX9by", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+
+    emailjs
+      .sendForm("service_f412m9o", "template_pvlv12a", form.current, {
+        publicKey: "5rgXB8WcpgSZPjrA0",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
         },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      console.log(data, "❤️😎"); // Handle response from API
-      // Optionally, reset form fields or display success message
-    } catch (error) {
-      console.error("Error:", error);
-      // Optionally, display error message to user
-    }
+
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+
+    setIsSubmitted(true);
+
+    // Reset submission status after a certain period of time
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 1000);
   };
 
   return (
     <div className="w-full h-screen bg-[] flex justify-center item-center p-4">
+      {isSubmitted && (
+        <p
+          className="Success flex justify-center item-center "
+          style={{ color: "green" }}
+        >
+          Message sent
+        </p>
+      )}
       <form
-        onSubmit={handleSubmit}
+        ref={form}
+        onSubmit={sendEmail}
         className="flex flex-col max-w-[600px] w-full"
       >
         <div className="pb-4">
@@ -51,18 +73,18 @@ const Contact = () => {
 
         <input
           className="bg-[#E5E7EA] p-2"
-          value={formData.name}
           name="name"
-          onChange={handleChange}
           type="text"
+          value={formData.name}
+          onChange={handleChange}
           placeholder="Name"
         />
         <input
           className="bg-[#E5E7EA] p-2 my-4"
-          value={formData.email}
-          onChange={handleChange}
           type="email"
           name="email"
+          value={formData.email}
+          onChange={handleChange}
           placeholder="Email"
         />
         <textarea
