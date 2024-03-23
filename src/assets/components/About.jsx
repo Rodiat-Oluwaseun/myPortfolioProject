@@ -22,7 +22,8 @@ const About = () => {
             <img
               src={Kikky}
               alt="Image"
-              className="absolute inset-0  h-full object-cover border-radius-10px justify-items-center"
+              // className="absolute inset-0  h-full object-cover border-radius-20px justify-items-center"
+              className=" absolute inset-0 rounded-full h-40 w-30 flex items-center justify-center"
             />
             <div className="absolute inset-0"></div>
           </div>
