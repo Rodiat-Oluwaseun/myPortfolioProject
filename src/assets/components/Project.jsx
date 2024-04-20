@@ -2,7 +2,9 @@ import React from "react";
 import Horiseon from "../../assets/Images/Horiseon.png";
 import WeatherDashboard from "../../assets/Images/WeatherDashboard.jpeg";
 import Book from "../../assets/Images/BookLibrary.jpeg";
+import password from "../../assets/Images/passwordgen.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaLink } from "react-icons/fa";
 
 function Project() {
   return (
@@ -20,7 +22,7 @@ function Project() {
 
           {/* Horiseon project */}
           <div
-            style={{ background: `url(${Horiseon})` }}
+            style={{ backgroundImage: `url(${Horiseon})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto work-div"
           >
             {/* Hover effect */}
@@ -61,7 +63,7 @@ function Project() {
 
           <div
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto h-screen bg-coverA bg-center work-div"
-            style={{ background: `url(${Book})` }}
+            style={{ backgroundImage: `url(${Book})` }}
           >
             {/* Hover effect */}
             <div className="opacity-0 group-hover:opacity-100">
@@ -70,10 +72,8 @@ function Project() {
               </span>
               <div>
                 <a href="https://venkatamora.github.io/Book-and-Movies-library/index.html">
-                  <button> Demo</button>
-                </a>
-                <a href="">
-                  <button>Link</button>
+                  <FaLink />
+                  <button> </button>
                 </a>
               </div>
             </div>
@@ -90,37 +90,42 @@ function Project() {
               </span>
               <div>
                 <a href="">
-                  <button> Demo</button>
-                </a>
-                <a href="">
-                  <button>Link</button>
+                  <button>
+                    <FaLink />
+                  </button>
                 </a>
               </div>
             </div>
           </div>
 
           <div
-            style={{ background: `url(${Horiseon})` }}
+            style={{ backgroundImage: `url(${password})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto work-div"
           >
             {/* Hover effect */}
-            <div className="opacity-0 group-hover:opacity-100">
+            <div className="opacity-0 group-hover:opacity-100 m-5">
               <span className="text-2xl  font-serif tracking-wider">
-                React JS Application
+                DailyPlannerApp
               </span>
+
+              <p>
+                This is an application that allow employee to generate a random
+                password based on criteria they’ve selected by modifying starter
+                code.
+              </p>
+
               <div>
-                <a href="">
-                  <button> Demo</button>
-                </a>
-                <a href="">
-                  <button>Link</button>
+                <a href=" https://rodiat-oluwaseun.github.io/passWordGenerator/">
+                  <button>
+                    <FaLink />
+                  </button>
                 </a>
               </div>
             </div>
           </div>
 
           <div
-            style={{ background: `url(${WeatherDashboard})` }}
+            style={{ backgroundImage: `url(${WeatherDashboard})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto work-div"
           >
             {/* Hover effect */}
@@ -135,11 +140,8 @@ function Project() {
               <div>
                 <a href=" https://rodiat-oluwaseun.github.io/weatherDashboard/">
                   <button>
-                    <FontAwesomeIcon icon="fal fa-link" />
+                    <FaLink />
                   </button>
-                </a>
-                <a href="">
-                  <button>Link</button>
                 </a>
               </div>
             </div>
