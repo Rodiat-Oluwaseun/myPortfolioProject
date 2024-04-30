@@ -1,6 +1,7 @@
 import React from "react";
 import Horiseon from "../../assets/Images/Horiseon.png";
 import WeatherDashboard from "../../assets/Images/WeatherDashboard.jpeg";
+import Quizapp from "../../assets/Images/codeQuiz.jpeg";
 import Book from "../../assets/Images/BookLibrary.jpeg";
 import password from "../../assets/Images/passwordgen.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -42,20 +43,26 @@ function Project() {
           </div>
           {/* Weather project */}
           <div
-            style={{ background: `url(${Horiseon})` }}
+            style={{ backgroundImage: `url(${Quizapp})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto  work-div  "
           >
             {/* Hover effect */}
-            <div className="opacity-0 group-hover:opacity-100">
+            <div className="opacity-0 group-hover:opacity-100 m-5">
               <span className="text-2xl  font-serif tracking-wider">
-                React JS Application
+                Code Quiz
               </span>
+              <p>
+                A timed coding quiz with multiple-choice questions. This app
+                will run in the browser, and will feature dynamically updated
+                HTML and CSS powered by JavaScript code that you write. It will
+                have a clean, polished, and responsive user interface.
+              </p>
               <div>
-                <a href="https://github.com/Rodiat-Oluwaseun">
-                  <button> Demo</button>
-                </a>
-                <a href="">
-                  <button>Link</button>
+                <a href="https://rodiat-oluwaseun.github.io/codeQuiz/">
+                  <button>
+                    {" "}
+                    <FaLink />
+                  </button>
                 </a>
               </div>
             </div>
